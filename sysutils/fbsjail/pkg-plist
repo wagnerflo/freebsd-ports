@@ -1,0 +1,2 @@
+sbin/fbsjail
+%%DATADIR%%/fbsjail_build.sh

@@ -1,7 +1,7 @@
 # Created by: Florian Wagner <florian@wagner-flo.net>
 # $FreeBSD$
 
-PORTNAME=	fbsdist
+PORTNAME?=	fbsdist
 PORTVERSION=	0.1
 CATEGORIES=	sysutils
 
