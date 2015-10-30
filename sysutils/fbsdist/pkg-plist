@@ -1,0 +1,10 @@
+sbin/fbsdist
+%%DATADIR%%/common.sh
+%%DATADIR%%/fbsdist_edit.sh
+%%DATADIR%%/fbsdist_import.sh
+%%DATADIR%%/fbsdist_init.sh
+%%DATADIR%%/fbsdist_install.sh
+%%DATADIR%%/fbsdist_install_prepare.sh
+%%DATADIR%%/fbsdist_list.sh
+%%DATADIR%%/fbsdist_rm.sh
+%%DATADIR%%/fbsdist_select.sh
