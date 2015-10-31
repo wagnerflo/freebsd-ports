@@ -1,2 +1,7 @@
 sbin/fbsjail
 %%DATADIR%%/fbsjail_build.sh
+%%DATADIR%%/fbsjail_list.sh
+%%DATADIR%%/fbsjail_select.sh
+%%DATADIR%%/poudriere_get_jailsfs.sh
+%%DATADIR%%/poudriere_jget.sh
+%%DATADIR%%/poudriere_jset.sh
