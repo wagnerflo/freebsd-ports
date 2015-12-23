@@ -1,0 +1,40 @@
+#!/bin/sh
+# Created by: Florian Wagner <floran@wagner-flo.net>
+# $FreeBSD: $
+#
+# PROVIDE: logfmon
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf to enable logfmon:
+#
+# logfmon_enable (bool):	Set it to "YES" to enable logfmon
+#				Default to "NO"
+#
+# logfmon_config (string):	Configuration file,
+#				Default %%PREFIX%%/etc/logfmon.conf
+#
+# logfmon_cache (string):	Location of cache file
+#				Default /var/db/logfmon.cache
+#
+# logfmon_pid (string):	Location of pid file
+#				Default /var/run/logfmon.pid
+#
+
+. /etc/rc.subr
+
+name=logfmon
+rcvar=logfmon_enable
+
+load_rc_config ${name}
+
+: ${logfmon_enable:=NO}
+: ${logfmon_config:=%%PREFIX%%/etc/logfmon.conf}
+: ${logfmon_cache:=/var/db/logfmon.cache}
+: ${logfmon_pidfile:=/var/run/logfmon.pid}
+
+command=%%PREFIX%%/bin/logfmon
+command_args="-c ${logfmon_cache} -f ${logfmon_config} -p ${logfmon_pidfile}"
+required_files=${logfmon_config}
+
+run_rc_command "$1"

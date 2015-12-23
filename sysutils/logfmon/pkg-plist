@@ -1,0 +1,8 @@
+bin/logfmon
+etc/rc.d/logfmon
+man/man5/logfmon.conf.5.gz
+man/man8/logfmon.8.gz
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/brandini.conf
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/logfmon-freebsd.conf
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/logfmon-openbsd.conf
+@dirrm %%PORTEXAMPLES%%%%EXAMPLESDIR%%
