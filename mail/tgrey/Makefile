@@ -2,18 +2,16 @@
 # $FreeBSD: $
 
 PORTNAME=	tgrey
-PORTVERSION=	0.1.20150921
-PORTREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	https://bitbucket.org/wagnerflo/tgrey/get/
-DISTNAME=	12c940f60c7f
-DIST_SUBDIR=	${PORTNAME}
+PORTVERSION=	0.1.a.20160308
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	wagnerflo
+GH_TAGNAME=	5241feb
 
 MAINTAINER=	florian@wagner-flo.net
 COMMENT=	Greylisting for Postfix using tdb as backend
-
 LICENSE=	BSD2CLAUSE
-WRKSRC=		${WRKDIR}/wagnerflo-${PORTNAME}-${DISTNAME}
 
 USES=		pkgconfig autoreconf libtool
 AUTOMAKE_ARGS=	--add-missing
