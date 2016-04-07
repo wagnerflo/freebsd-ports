@@ -1,7 +1,7 @@
-# $FreeBSD: branches/2015Q4/mail/roundcube/Makefile 397565 2015-09-22 18:22:12Z ale $
+# $FreeBSD: branches/2016Q2/mail/roundcube/Makefile 409873 2016-03-01 14:49:05Z gahr $
 
 PORTNAME=	roundcube
-DISTVERSION=	1.1.3
+DISTVERSION=	1.1.4
 PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES?=	mail www
