@@ -1,11 +1,11 @@
-# $FreeBSD: branches/2016Q2/mail/roundcube/Makefile 409873 2016-03-01 14:49:05Z gahr $
+# $FreeBSD: branches/2016Q3/mail/roundcube/Makefile 416669 2016-06-10 10:28:22Z gahr $
 
 PORTNAME=	roundcube
-DISTVERSION=	1.1.4
+DISTVERSION=	1.2.0
 PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES?=	mail www
-MASTER_SITES=	SF/${PORTNAME}mail/${PORTNAME}mail/${DISTVERSION:tu}
+MASTER_SITES=	https://github.com/roundcube/roundcubemail/releases/download/${DISTVERSION}/
 DISTNAME=	${PORTNAME}mail-${DISTVERSION}-complete
 
 MAINTAINER?=	ale@FreeBSD.org
@@ -24,10 +24,9 @@ CPE_PRODUCT=	webmail
 CPE_VENDOR=	roundcube
 
 WANT_PHP_WEB=	yes
-USE_PHP=	pcre mbstring session iconv dom xml json intl zip filter
-IGNORE_WITH_PHP=52
+USE_PHP=	pcre mbstring session iconv dom xml json intl zip filter openssl fileinfo exif mcrypt
 
-OPTIONS_DEFINE=	SSL LDAP GD PSPELL NSC DOCS EXIF FILEINFO MCRYPT
+OPTIONS_DEFINE=	LDAP GD PSPELL NSC DOCS
 OPTIONS_SINGLE=	DB
 OPTIONS_SINGLE_DB=	MYSQL PGSQL SQLITE
 OPTIONS_DEFAULT=MYSQL
@@ -35,7 +34,6 @@ OPTIONS_DEFAULT=MYSQL
 MYSQL_DESC=	Use MySQL backend
 PGSQL_DESC=	Use PostgreSQL backend
 SQLITE_DESC=	Use SQLite backend
-SSL_DESC=	Enable SSL support (imaps or google spellcheck)
 LDAP_DESC=	Enable LDAP support (address book)
 GD_DESC=	Enable GD support (image conversion)
 PSPELL_DESC=	Enable PSpell support (internal spellcheck)
@@ -55,10 +53,6 @@ USE_PHP+=	pdo_pgsql
 USE_PHP+=	pdo_sqlite
 .endif
 
-.if ${PORT_OPTIONS:MSSL}
-USE_PHP+=	openssl
-.endif
-
 .if ${PORT_OPTIONS:MLDAP}
 USE_PHP+=	ldap
 .endif
@@ -69,18 +63,6 @@ USE_PHP+=	gd
 
 .if ${PORT_OPTIONS:MPSPELL} || ${PORT_OPTIONS:MNSC}
 USE_PHP+=	pspell
-.endif
-
-.if ${PORT_OPTIONS:MEXIF}
-USE_PHP+=	exif
-.endif
-
-.if ${PORT_OPTIONS:MFILEINFO}
-USE_PHP+=	fileinfo
-.endif
-
-.if ${PORT_OPTIONS:MMCRYPT}
-USE_PHP+=	mcrypt
 .endif
 
 .if ${PORT_OPTIONS:MNSC}
