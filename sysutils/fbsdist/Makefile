@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME?=	fbsdist
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	sysutils
 
 MAINTAINER=	florian@wagner-flo.net
@@ -9,7 +9,7 @@ MAINTAINER=	florian@wagner-flo.net
 USE_GITHUB=	yes
 GH_ACCOUNT=	wagnerflo
 GH_PROJECT=	fbsdist
-GH_TAGNAME=	86c7815
+GH_TAGNAME=	349def5
 
 RUN_DEPENDS+=	gpg:${PORTSDIR}/security/gnupg
 
