@@ -4,6 +4,7 @@
 PORTNAME=	tgrey
 CATEGORIES=	mail
 PORTVERSION=	0.1.a.20160308
+PORTREVISION=	1
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	wagnerflo
@@ -18,8 +19,8 @@ AUTOMAKE_ARGS=	--add-missing
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-db-path=/var/db/tgrey.tdb
+CXXFLAGS+=	-Wno-error=deprecated-declarations
 
-BUILD_DEPENDS+=	tdb>=1.2.11:${PORTSDIR}/databases/tdb
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+LIB_DEPENDS=	libtdb.so:databases/tdb
 
 .include <bsd.port.mk>
