@@ -1,0 +1,4 @@
+libexec/%%PORTNAME%%/libquery_engine.so.node
+libexec/%%PORTNAME%%/prisma-fmt
+libexec/%%PORTNAME%%/query-engine
+libexec/%%PORTNAME%%/schema-engine
