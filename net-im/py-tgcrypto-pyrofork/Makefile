@@ -1,13 +1,13 @@
-PORTNAME=	tgcrypto
-PORTVERSION=	1.2.5
+PORTNAME=	tgcrypto-pyrofork
+PORTVERSION=	1.2.7
 CATEGORIES=	net-im python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	TgCrypto-${DISTVERSION}
+DISTNAME=	TgCrypto-pyrofork-${DISTVERSION}
 
 MAINTAINER=	florian@wagner-flo.de
-COMMENT=	Fast and Portable Cryptography Extension Library for Pyrogram
-WWW=		https://pypi.org/project/TgCrypto/
+COMMENT=	Fast and Portable Cryptography Extension Library for Pyrofork
+WWW=		https://pypi.org/project/TgCrypto-pyrofork/
 
 LICENSE=	LGPL3
 
