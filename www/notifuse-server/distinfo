@@ -1,5 +1,5 @@
-TIMESTAMP = 1777455103
-SHA256 (go/www_notifuse-server/Notifuse-notifuse-v30.1_GH0/go.mod) = 0e640e7aeba149914458971d12fa21d67d47fec0eaa3ad92a262da0821312249
-SIZE (go/www_notifuse-server/Notifuse-notifuse-v30.1_GH0/go.mod) = 5815
-SHA256 (go/www_notifuse-server/Notifuse-notifuse-v30.1_GH0/Notifuse-notifuse-v30.1_GH0.tar.gz) = d659c6d50aced802721f83352abea775af4e79cb60995e7c35e4352f62e45146
-SIZE (go/www_notifuse-server/Notifuse-notifuse-v30.1_GH0/Notifuse-notifuse-v30.1_GH0.tar.gz) = 4903019
+TIMESTAMP = 1779090584
+SHA256 (go/www_notifuse-server/Notifuse-notifuse-v30.3_GH0/go.mod) = 7755a517be109c6bea4e8ed87e5937264eb49eae2328ff43af7366644c16dd31
+SIZE (go/www_notifuse-server/Notifuse-notifuse-v30.3_GH0/go.mod) = 5785
+SHA256 (go/www_notifuse-server/Notifuse-notifuse-v30.3_GH0/Notifuse-notifuse-v30.3_GH0.tar.gz) = 1c2c6f1115e180b44ddd7eed52255f3c4f33becf23863525e8091b1046401ab6
+SIZE (go/www_notifuse-server/Notifuse-notifuse-v30.3_GH0/Notifuse-notifuse-v30.3_GH0.tar.gz) = 4919315
